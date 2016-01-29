@@ -9,7 +9,13 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class Bubbles extends AppCompatActivity {
+public class Bubbles extends AppCompatActivity
+{
+    /** Called when the user clicks the 'Send' button. **/
+    public void sendMessage(View view)
+    {
+        // Do something.
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
