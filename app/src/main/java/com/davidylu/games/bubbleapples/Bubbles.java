@@ -25,6 +25,12 @@ public class Bubbles extends AppCompatActivity
         startActivity(intent);
     }
 
+    /*
+     * Notes:  Called every time this application is 'created.'
+     *          Should not affect paused/resuming the application.
+     *
+     *          After this, the system calls onStart() and onResume() in quick succession.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
