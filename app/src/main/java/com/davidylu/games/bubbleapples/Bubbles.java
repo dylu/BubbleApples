@@ -69,4 +69,13 @@ public class Bubbles extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onDestroy()
+    {
+        super.onDestroy();
+
+        // Stop method tracing that the activity started during onCreate()
+        android.os.Debug.stopMethodTracing();
+    }
 }
