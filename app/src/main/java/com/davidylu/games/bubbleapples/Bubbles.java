@@ -55,6 +55,28 @@ public class Bubbles extends AppCompatActivity
         return true;
     }
 
+    /*
+     * Although the onPause() method is called before onStop(), you should
+     * use onStop() to perform larger, more CPU intensive shut-down operations,
+     * such as writing information to a database.
+     */
+    @Override
+    public void onStop()
+    {
+        super.onStop();
+
+    }
+
+    @Override
+    public void onDestroy()
+    {
+        super.onDestroy();
+
+        // Stop method tracing that the activity started during onCreate()
+        android.os.Debug.stopMethodTracing();
+    }
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -70,12 +92,4 @@ public class Bubbles extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onDestroy()
-    {
-        super.onDestroy();
-
-        // Stop method tracing that the activity started during onCreate()
-        android.os.Debug.stopMethodTracing();
-    }
 }
