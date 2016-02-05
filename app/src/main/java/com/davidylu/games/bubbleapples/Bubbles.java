@@ -55,6 +55,31 @@ public class Bubbles extends AppCompatActivity
         return true;
     }
 
+    // Activity either being started for the first time or restarted.
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
+
+        // For example if our app needs gps:
+//        LocationManager locationManager =
+//                (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+//        boolean gpsEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+//
+//        if (!gpsEnabled) {
+//            // Create a dialog here that requests the user to enable GPS, and use an intent
+//            // with the android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS action
+//            // to take the user to the Settings screen to enable GPS when they click "OK"
+//        }
+    }
+
+    // Application being restarted from stopped state.
+    @Override
+    protected void onRestart()
+    {
+        super.onRestart();
+    }
+
     /*
      * Although the onPause() method is called before onStop(), you should
      * use onStop() to perform larger, more CPU intensive shut-down operations,
